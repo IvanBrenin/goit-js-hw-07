@@ -21,8 +21,8 @@ function onGalleryItemClick(event) {
         const instance = basicLightbox.create(`
         <img src="${event.target.dataset.source}" width="1280">
         `, {
-            onShow: (instance) => document.body.addEventListener('keydown', onEscKeyPress),
-            onClose: (instance) => document.body.removeEventListener('keydown', onEscKeyPress),
+            onShow: (instance) => window.addEventListener('keydown', onEscKeyPress),
+            onClose: (instance) => window.removeEventListener('keydown', onEscKeyPress),
         })
         instance.show()
 
