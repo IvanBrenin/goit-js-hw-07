@@ -6,10 +6,10 @@ const refs = {
 }
 
 const gallery = galleryItems.map(item => 
-   `<a class="gallery__item" href="${item.original}"><img src="${item.preview}" alt="${item.description}" title="${item.description}" class="gallery__image"></img></a>`
+   `<a class="gallery__item" href="${item.original}"><img src="${item.preview}" alt="${item.description}" class="gallery__image"></img></a>`
 ).join("");
 
 refs.gallery.insertAdjacentHTML('beforeend', gallery)
-const lightbox = new SimpleLightbox('.gallery a', {'captionDelay': 250});
+const lightbox = new SimpleLightbox('.gallery a', {'captionDelay': 250, 'captionsData': 'alt'});
 
 
